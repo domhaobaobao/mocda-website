@@ -1,0 +1,354 @@
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  }
+}
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 2000px) {
+  html {
+    font-size: 34px;
+  }
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+@media screen and (min-width: 320px) {
+  h2 {
+    font-size: calc(20px + 6 * ((100vw - 320px) / 680));
+  }
+}
+@media screen and (min-width: 1000px) {
+  h2 {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 2000px) {
+  h2 {
+    font-size: 42px;
+  }
+}
+
+.display-4 {
+  font-size: 30px;
+}
+@media screen and (min-width: 320px) {
+  .display-4 {
+    font-size: calc(60px + 10 * ((100vw - 320px) / 680));
+  }
+}
+@media screen and (min-width: 1000px) {
+  .display-4 {
+    font-size: 88px;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .display-4 {
+    font-size: 100px;
+  }
+}
+
+body {
+  background-color: #e5e5e5;
+  font-family: "Lato", sans-serif;
+  line-height: 1.3;
+}
+
+.bg-header {
+  background-image: url("../img/bg/bg-header.jpg");
+
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+h1 {
+  color: white;
+  font-weight: 400;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+
+  
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.arrow span {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-bottom: 1px solid #fff;
+  border-right: 1px solid #fff;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 2s infinite;
+}
+
+.arrow span:nth-child(2) {
+  animation-delay: -0.2s;
+  transform: rotate(45deg) translate(-30px, -30px);
+}
+.arrow span:nth-child(3) {
+  animation-delay: -0.4s;
+  transform: rotate(45deg);
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-30px, -30px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(30px, 30px);
+  }
+}
+
+.text {
+  line-height: 2.3rem;
+  font-weight: 300;
+  letter-spacing: 0.08rem;
+}
+
+.caption {
+  line-height: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.08rem;
+}
+
+.img-about {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+}
+
+/* ==========================================================================
+   Navbar Style
+   ========================================================================== */
+
+.navbar-expand-md .navbar-nav .nav-link {
+  color: #fff;
+  font-size: 1rem;
+  padding: 8px 0px;
+  margin-left: 26px;
+  position: relative;
+  font-weight: 300;
+}
+
+.navbar-expand-md .navbar-nav .nav-link:before
+ {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #ffffff;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+}
+
+
+.navbar-expand-md .navbar-nav .nav-link:hover::before {
+  width: 100%;
+}
+
+.navbar-expand-md .navbar-nav .nav-link:focus,
+.navbar-expand-md .navbar-nav .nav-link:hover,
+.navbar-expand-md .navbar-nav .nav-link:hover:before {
+  color: #ffffff;
+}
+
+.navbar-expand-md .navbar-toggler {
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  margin: 5px;
+  cursor: pointer;
+  float: right;
+}
+
+.navbar-expand-md .navbar-toggler i {
+  color: #fff !important;
+}
+
+.navbar-expand-md .navbar-toggler:focus {
+  outline: none;
+}
+
+li {
+  width: fit-content;
+}
+
+/* ==========================================================================
+   Team Section
+   ========================================================================== */
+
+.team h2 {
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+.team h2 span {
+  color: #ff9100;
+}
+
+.team p {
+  font-weight: 400;
+  line-height: 1.7;
+  color: #999999;
+  margin: 20px 0 60px;
+  padding: 0;
+}
+/* ==========================================================================
+   team2 Section
+   ========================================================================== */
+
+.team-section {
+  background: #f1f1f1;
+}
+.team-section h2 {
+  font-weight: 300;
+  display: inline-block;
+  border-bottom: 2px solid;
+  padding-bottom: 10px;
+}
+.pe {
+  float: left;
+  width: calc(100% / 3);
+  overflow: hidden;
+  padding: 40px 0;
+  transition: 0.4s;
+}
+.pe:hover {
+  background: #ddd;
+}
+.pe img {
+  width: 150px;
+  height: 150px;
+}
+.p-name {
+  margin: 16px 0;
+}
+.p-des {
+  font-style: italic;
+  color: #3498db;
+}
+.p-sm {
+  margin-top: 12px;
+}
+.p-sm a {
+  margin: 0 4px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  transition: 0.4s;
+}
+.p-sm a:hover {
+  transform: scale(1.3);
+}
+.p-sm a i {
+  color: #333;
+  line-height: 30px;
+}
+@media screen and (max-width: 600px) {
+  .pe {
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   Contact Section
+   ========================================================================== */
+.form-control textarea {
+  width: 80%;
+}
+.contact-section h2 {
+  font-weight: 300;
+  display: inline-block;
+  border-bottom: 2px solid;
+  padding-bottom: 10px;
+}
+.subscribe {
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+
+.subscribe:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.subscribe input,
+.subscribe textarea,
+.subscribe select {
+  background: #fff;
+  color: #060c22;
+  border: 0;
+  outline: none;
+  margin: 0;
+  padding: 9px 20px;
+  border-radius: 25px;
+}
+
+.subscribe button {
+  border: 0;
+  padding: 9px 20px;
+  cursor: pointer;
+  background: #f82249;
+  color: #fff;
+  transition: all 0.3s ease;
+  outline: none;
+  border-radius: 25px;
+}
+
+.subscribe button:hover {
+  background: #e0072f;
+}
+
+@media only screen and (min-width: 768px) {
+  .subscribe input {
+    min-width: 300px;
+  }
+}
+
+footer {
+  background: #1a1e25;
+  color: #868c96;
+  padding: 3rem;
+  align-items: center;
+}
+
+footer img {
+  width: 44px;
+}
+
+.social-icons {
+  font-size: 1.5rem;
+}
+
+footer div {
+  align-items: center;
+}
