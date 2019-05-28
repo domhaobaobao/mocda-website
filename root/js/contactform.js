@@ -5,7 +5,7 @@
     $(".contact-form").each(function() {
       var $contact_form = $(this);
       var $contact_button = $contact_form.find(".form-submit");
-      var contact_action = "http://www.mocda.org/reg";
+      var contact_action = "https://www.mocda.org/reg";
   
       // Display the hidden form.
       // $contact_form.removeClass('hidden');
