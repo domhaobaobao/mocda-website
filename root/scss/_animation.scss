@@ -1,0 +1,31 @@
+@keyframes animate {
+    0% {
+      opacity: 0;
+      transform: rotate(45deg) translate(-30px, -30px);
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: rotate(45deg) translate(30px, 30px);
+    }
+  }
+  
+  .text {
+    line-height: 2.3rem;
+    font-weight: 300;
+    letter-spacing: 0.08rem;
+  }
+  
+  .caption {
+    line-height: 2rem;
+    font-weight: 400;
+    letter-spacing: 0.08rem;
+  }
+  
+  .img-about {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+  }

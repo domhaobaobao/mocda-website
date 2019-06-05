@@ -1,0 +1,93 @@
+$bp-small: 320px;
+$bp-medium: 1000px;
+$bp-large: 2000px;
+
+$lightgrey: #e5e5e5;
+
+@mixin bp-lg {
+    @media only screen and (min-width: $bp-large) {
+        @content;
+    }
+}
+
+@mixin bp-md {
+    @media only screen and (min-width: $bp-medium) {
+        @content;
+    }
+}
+
+@mixin bp-sm {
+    @media only screen and (min-width: $bp-small) {
+        @content;
+    }
+}
+
+
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+  }
+  @include bp-sm {
+    html {
+      font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+    }
+  }
+  @include bp-md {
+    html {
+      font-size: 24px;
+    }
+  }
+  @include bp-lg {
+    html {
+      font-size: 34px;
+    }
+  }
+  
+  h2 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  @include bp-sm {
+    h2 {
+      font-size: calc(20px + 6 * ((100vw - 320px) / 680));
+    }
+  }
+  @include bp-md {
+    h2 {
+      font-size: 30px;
+    }
+  }
+  @include bp-lg {
+    h2 {
+      font-size: 42px;
+    }
+  }
+  
+  .display-4 {
+    font-size: 30px;
+  }
+  @include bp-sm {
+    .display-4 {
+      font-size: calc(60px + 10 * ((100vw - 320px) / 680));
+    }
+  }
+  @include bp-md {
+    .display-4 {
+      font-size: 88px;
+    }
+  }
+  @include bp-lg {
+    .display-4 {
+      font-size: 100px;
+    }
+  }
+  
+  body {
+    background-color: $lightgrey;
+    font-family: "Lato", sans-serif;
+    line-height: 1.3;
+    &.white{
+      background-color: white;
+    }
+  }

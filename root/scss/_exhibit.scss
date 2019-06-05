@@ -1,0 +1,183 @@
+h1.exhibitions{
+    color: #303030;
+}
+
+/* -----------------------------------------------------------
+   Layout
+----------------------------------------------------------- */
+
+#container {
+    width: 1220px;
+    padding: 60px 0 0;
+    position: relative;
+    margin: 0 auto;
+}
+
+
+/* Header area
+----------------------------------------------------------- */
+
+#header {
+    background: #FFF;
+    padding: 0;
+    margin: 0;
+    width: 240px;
+    position: fixed;
+    top: 60px;
+    float: left;
+    .inner {
+        padding: 0 25px 0 0;
+    }
+}
+
+
+/* Logo
+----------------------------------------------------------- */
+
+#logo {
+    float: none;
+    display: block;
+    border-bottom: 1px solid $lightgrey;
+    padding: 0 0 45px;
+    margin: 0 0 13px;
+    background: center 0 no-repeat;
+    img a {
+        padding: 0 0 0;
+        text-align: center;
+        font-size: 19px;
+        line-height: 26px;
+        letter-spacing: 7px;
+        font-weight: normal;
+    }
+}
+
+
+/* Generic navigation
+----------------------------------------------------------- */
+
+    .navigation ul li.last {
+        margin-right: 0 !important;
+    }
+    .navigation ul li a {
+        line-height: 11px;
+        text-transform: uppercase;
+        font-size: 11px;
+        font-weight: normal;
+        letter-spacing: 3px;
+        padding: 5px 0;
+    }
+    .navigation ul li a,
+    .navigation ul li a:visited {
+        color: #5b5b5b;
+    }
+    .navigation ul li a:hover {
+        color: #5b5b5b;
+    }
+    .navigation ul li.active a,
+    .navigation ul li.active a:visited,
+    .navigation ul li.active a:hover {
+        color: #303030;
+    }
+
+
+    /* Top nav
+    ----------------------------------------------------------- */
+
+    #top_nav.navigation {
+        float: none;
+        clear: none;
+        padding: 35px 0;
+        border-bottom: 1px solid $lightgrey;
+    }
+    #top_nav.navigation {
+        ul{
+            padding-left: 0;
+            li {
+                margin: 0;
+                float: none;
+                min-height: 20px;
+                margin: 0 0 14px;
+                width: 100%;
+                display: block;
+                text-align: center;
+            }
+        }
+    }
+    #top_nav.navigation ul li a {
+        font-size: 11px;
+        display: inline;
+        float: none;
+        background: #fff;
+        padding: 8px 8px;
+    }
+
+    // ul.topnav{
+    //     padding-left: 0;
+    // }
+
+
+/* Header social links
+----------------------------------------------------------- */
+#header #social_links_nav {
+    display: block;
+    margin: 10px 0 0 0;
+    text-align: center;
+}
+
+#header #social_links_nav .social_media_icon {
+    background-image: url(/lib/g/1.0/images/social_icons_new.png);
+    border: none;
+    background-color: transparent;
+    margin: 0 2px;
+}
+
+/* Content areas
+----------------------------------------------------------- */
+
+#main_content {
+    padding: 0;
+    margin: 0 0 0 204px;
+    min-height: 500px;
+    padding-left: 36px;
+}
+    
+
+#content {
+    clear: both;
+}
+
+#content_module {
+    float: left;
+    width: 580px;
+}
+
+.card{
+    border:none;
+    border-radius: 0;
+    .card-body{
+        padding: 1rem;
+    }
+    .card-img{
+        border-radius: 0;
+    }
+    a.linktext{
+        font-weight: 300;
+        font-size: 0.8rem;
+        margin-bottom: 0.3rem;
+        display: block;
+        color: #303030;
+        &:last-child{
+            color: #5b5b5b;
+        }
+        &:hover, &:focus{
+            text-decoration: underline;
+        }
+    }
+    
+    .card-footer {
+        padding: 0.2rem 0;
+        background-color: white;
+        border-top: none;
+        text-align: center;
+    }
+}
