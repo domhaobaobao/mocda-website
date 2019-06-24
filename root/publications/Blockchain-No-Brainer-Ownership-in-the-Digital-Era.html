@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Mocda - Blockchain No-Brainer: Ownership in the Digital Era</title>
+	<meta name="author" content="name">
+	<meta name="description" content="description here">
+	<meta name="keywords" content="keywords,here">
+	<link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+	<!--Replace with your tailwind.css once created-->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+	<style>
+		.smooth {
+			transition: box-shadow 0.3s ease-in-out;
+		}
+
+		::selection {
+			background-color: aliceblue
+		}
+	</style>
+</head>
+
+<body class="bg-white font-sans leading-normal tracking-normal">
+
+	<!--Nav-->
+	<nav class="bg-gray-900 p-4 mt-0 w-full">
+		<div class="container mx-auto flex items-center">
+			<div class="flex text-white font-extrabold">
+				<a class="flex text-white text-base no-underline hover:text-white hover:no-underline" href="#">
+					<span class="hidden w-0 md:w-auto md:block pl-1">Mocda</span>
+				</a>
+			</div>
+			<div class="flex pl-4 text-sm">
+				<ul class="list-reset flex justify-between flex-1 md:flex-none items-center">
+					<li class="mr-2">
+						<a class="inline-block py-2 px-2 text-white no-underline" href="index.html">HOME</a>
+					</li>
+					<li class="mr-2">
+						<a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-2"
+							href="#">Publications</a>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!--slide in nav-->
+	<div id="header" class="bg-white fixed w-full z-10 top-0 hidden animated" style="opacity: .95;">
+		<div class="bg-white">
+			<div class="flex flex-wrap items-center content-center">
+				<div class="flex w-1/2 justify-start text-white font-extrabold">
+					<a class="flex text-gray-900 no-underline hover:text-gray-900 hover:no-underline pl-2" href="#">
+						<span class="hidden w-0 md:w-auto md:block pl-1">Mocda</span>
+					</a>
+				</div>
+				<div class="flex w-1/2 justify-end content-center">
+					<p class="hidden sm:block mr-3 text-center h-14 p-4 text-xs"><span class="pr-2">Share this</span> 👉
+					</p>
+					<a class="inline-block text-white no-underline hover:text-white hover:text-underline text-center h-10 w-10 p-2 md:h-auto md:w-16 md:p-4"
+						href="https://twitter.com/intent/tweet?url=#" style="background-color:#33b1ff;">
+						<svg class="fill-current text-white h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+							<path
+								d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z">
+							</path>
+						</svg>
+					</a>
+					<a class="inline-block text-white no-underline hover:text-white hover:text-underline text-center h-10 w-10 p-2 md:h-auto md:w-16 md:p-4"
+						href="https://www.facebook.com/sharer/sharer.php?u=#" style="background-color:#005e99">
+						<svg class="fill-current text-white h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+							<path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z">
+							</path>
+						</svg>
+					</a>
+					<a class="inline-block text-white no-underline hover:text-white hover:text-underline text-center h-10 w-10 p-2 md:h-auto md:w-16 md:p-4"
+						href="https://www.linkedin.com/shareArticle?mini=true&url=[URL]&title=[TITLE]"
+						style="background-color:#0e76a8;">
+						<svg class="fill-current text-white h-4" xmlns="http://www.w3.org/2000/svg" width="24"
+							height="24" viewBox="0 0 24 24">
+							<path
+								d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+						</svg>
+					</a>
+				</div>
+			</div>
+
+		</div>
+		<!--Progress bar-->
+		<div id="progress" class="h-1 bg-white shadow"
+			style="background:linear-gradient(to right, #4dc0b5 var(--scroll), transparent 0);"></div>
+	</div>
+
+
+	<!--Title-->
+	<div class="text-center pt-16 md:pt-32">
+		<p class="text-sm md:text-base text-teal-500 font-bold">28 MAY 2019</p>
+		<h1 class="font-bold break-normal text-3xl md:text-5xl">Blockchain No-Brainer:
+			Ownership in the Digital Era</h1>
+	</div>
+
+	<!--image-->
+	<div class="container w-full max-w-6xl mx-auto bg-white bg-cover mt-8 rounded"
+		style="background-image: url(img/1-post.jpeg); height: 75vh;"></div>
+
+	<!--Container-->
+	<div class="container max-w-5xl mx-auto -mt-16">
+
+		<div class="mx-0 sm:mx-6">
+
+			<div class="bg-white w-full p-8 md:p-24 text-xl md:text-2xl text-gray-800 leading-normal"
+				style="font-family:Georgia,serif;">
+
+				<!--Post Content-->
+
+
+				<!--Lead Para-->
+				<p class="text-2xl md:text-3xl mb-5">
+					Introduction
+				</p>
+
+				<p class="py-6">Seven months of intense activity have passed since the release of Blockchain 2018 Myth
+					vs. Reality article. As a follow-up to that blog post, I would like to take the opportunity to
+					analyse in further detail the impact that this new technology has on our perceptions of asset
+					ownership and value, how we are continuously exploring new forms of transactional automation and
+					then conclude with the challenge to deliver safe and fair governance.</p>
+
+				<p class="py-6">Since the topic to cover is vast, I have decided to divide it into two separate blog
+					posts, the first of which will cover how the meaning and perception of ownership is changing, while
+					the second will discuss how Smart Contract automation can help deliver safe, fair, fast, low-cost,
+					transparent and auditable transactional interoperability.</p>
+
+				<p class="py-6">My intention is to provide an abstract and accessible summary that describes the
+					state-of-the-art of blockchain technology and what motivations have led us to the current
+					development stage. While these posts will not focus on future innovation, they will serve as a
+					prelude to more bold publications I intend to release in the future.</p>
+
+
+
+				<p class="text-2xl md:text-3xl mb-5">
+					Digital Asset Ownership, Provenance and Handling <br>
+					How we value Digital vs. Physical Assets
+				</p>
+				<p class="py-6">In order to understand how the notion of ownership is currently perceived in society, I
+					propose to briefly analyse the journey that has brought us to the present stage and the factors
+					which have contributed to the evolution of our perceptions. </p>
+				<p class="py-6">Historically people have been predominantly inclined to own and trade physical objects.
+					This is probably best explained by the fact that physical objects stimulate our senses and don’t
+					require the capacity to abstract, as opposed to services for instance. Ownership was usually
+					synonymous with possession.</p>
+				<p class="py-6">Let us try to break down and extract the fundamentals of the economy of physical goods:
+					we originally came to this world and nothing was owned by anyone; possession by individuals then
+					gave rise to ownership ‘rights’ (obtained through the expenditure of labour - finding or creating
+					possessions); later we formed organisations that exercised territorial control and supported the
+					notion of ownership (via norms and mores that evolved into legal frameworks), as a form of
+					protection of physical goods. Land and raw materials are the building blocks of this aspect of our
+					economy.</p>
+				<p class="py-6">When we trade (buy or sell) commodities or other physical goods, what we own is a
+					combination of the raw material, which comes with a limited supply, plus the human/machine work
+					required to transform it to make it ready to be used and/or consumed. Value was historically based
+					on a combination of the inherent worth of the resource (scarcity being a proxy) plus the cost of the
+					work required to transform that resource into an asset. Special asset classes (e.g. art) soon
+					emerged where value was related to intangible factors such as provenance, fashion, skill (as opposed
+					to the quantum of labour) etc.
+
+				</p>
+				<p class="py-6">We can observe that even physical goods contain an abstract element: the design, the
+					capacity to model it, package it and make it appealing to the owners or consumers.
+					s </p>
+				<p class="py-6">In comparison, digital assets have a stronger element of abstraction which defines their
+					value, while their physical element is often negligible and replaceable (e.g. software can be stored
+					on disk, transferred or printed). These types of assets typically stimulate our intellect and
+					imagination, as our senses get activated via a form of rendering which can be visual, acoustic or
+					tactile. Documents, paintings, photos, sculptures and music notations have historical equivalents
+					that predate any form of electrically-based analog or digital representations.
+				</p>
+				<p class="py-6">The peculiarity of digital goods is that they can be copied exactly at very low cost:
+					for example, they can be easily reproduced in multiple representations on heterogeneous physical
+					platforms or substrates thanks to the discrete nature in which we store them (using a simplified
+					binary format). The perceivable form can be reconstructed and derived from these equal
+					representations an infinite number of times. This is a feature that dramatically influences how we
+					value digital assets. The opportunity to create replicas implies that it is not the copy nor the
+					rendering that should be valued, but rather the original digital work. In fact, this is one of the
+					primary achievements that blockchain has introduced via the hash lock inherent to its data
+					structure.
+				</p>
+				<p class="py-6">If used correctly the capacity to clone a digital item can increase confidence that it
+					will exist indefinitely and therefore maintain its value. However, as mentioned in my previous blog
+					post (Blockchain 2018 - Myth vs. Reality) the immutability and perpetual existence of digital goods
+					are not immune from facing destruction, as at present there is a dependence on a physical medium
+					(e.g. hard disk storage) that is potentially subject to alteration, degradation or obsolescence.
+				</p>
+				<p class="py-6">A blockchain, such as that of the Bitcoin network, represents a model for vast
+					replication and reinforcement of digital information via so-called Distributed Ledger Technology
+					(DLT). Repair mechanisms can intervene in order to restore integrity in the event that data gets
+					corrupted by a degrading physical support (i.e. a hard disk failure) or a malicious actor. The
+					validity of data is agreed upon by a majority (the level of majority varying across different DLT
+					implementations) of peer-to-peer actors (ledgers) through a process known as consensus.
+				</p>
+				<p class="py-6">This is a step in the right direction, although the exploration of increasingly advanced
+					platforms to preserve digital assets is expected to evolve further. As genetic evolution suggests,
+					clones with equal characteristics can all face extinction by the introduction of an actor that makes
+					the environment unfit for survival in a particular form. Thus, it might be sensible to introduce
+					heterogeneous types of ledgers to ensure their continued preservation on a variety of physical
+					platforms and therefore enhance the likelihood of survival of information.
+				</p>
+				<p class="text-2xl md:text-3xl mb-5">
+					The evolution of services and their automation
+				</p>
+				<p class="py-6">In the previous paragraph, we briefly introduced a distinction between physical assets
+					and goods where the abstraction element is dominant. Here I propose to analyse how we have started
+					to attach value to services and how we are becoming increasingly demanding about their performance
+					and quality.
+				</p>
+				<p class="py-6">Services are a form of abstract valuable commonly traded on the market. They represent
+					the actions bound to the contractual terms under which a transformation takes place. This
+					transformation can apply to physical goods, digital assets, other services themselves or to
+					individuals. What we trade, in this case, is the potential to exercise a transformation, which in
+					some circumstances might have been applied already. For instance, a transformed commodity, such as
+					refined oil, has already undergone a transformation from its original raw form.
+				</p>
+				<p class="py-6">Another example is an artefact where a particular shape can either be of use or trigger
+					emotional responses, such as artefacts with artistic value. Service transformation in the art world
+					can be highly individualistic (depending on the identity of the person doing the transforming (the
+					artist; the critic; the gallery etc) or the audience for the transformed work. Thus, Duchamp’s
+					elevation (or, possibly, degradation) of a porcelain urinal to artwork relied on a number of
+					connected elements (i.e. transformational actions by actors in the art world and beyond) for the
+					transformation to be successful - these elements are often only recognised and/or understood after
+					the transformation has been affected.
+				</p>
+				<p class="py-6">Even the rendering from an abstract form, such as with music notation or a record, the
+					actual sound is a type of transformation that we consider valuable and commonly trade. These
+					transformations can be performed by humans or machinery. With the surge of interest in digital
+					goods, there is a corresponding increasing interest in acquiring services to transform them.
+				</p>
+				<p class="py-6">As these transformations are being automated more and more, and the human element is
+					progressively being removed, even services are gradually taking the shape of automated algorithms
+					that are yet another form of digital asset, as is the case with Smart Contracts. Note, however, that
+					in order to apply the transformation, an algorithm is not enough, we need an executor such as a
+					physical or virtual machine.
+				</p>
+				<p class="py-6">In Part 2 we will analyse how the automation of services has led to the evolution of
+					Smart Contracts, as a way to deliver efficient, transparent and traceable transformations.
+				</p>
+				<p class="text-2xl md:text-3xl mb-5">
+					Sustainability and Access to resources
+				</p>
+				<p class="py-6">Intellectual and imagination stimulation is not the only motivator that explains the
+					increasing interest in digital goods and consequently their rising market value. Physical goods are
+					known to be quite costly to handle. In order to create, trade, own and preserve them there is a
+					significant expenditure required for storage, transport, insurance, maintenance, extraction of raw
+					materials etc.
+
+				</p>
+				<p class="py-6">There is a competitive and environmental cost involved, which makes access to physical
+					resources inherently non-scalable and occasionally prohibitive, especially in concentrated urban
+					areas. As a result, people are incentivised to own and trade digital goods and services, which turns
+					out to be a more sustainable way forward.
+
+				</p>
+				<p class="py-6">For example, let us think about an artist who lives in a densely populated city and
+					needs to acquire a canvas, paint, brushes, and so on, plus studio and storage space in order to
+					create a painting. Finding that these resources are difficult or impossible to access, he/she
+					decides to produce their artwork in a digital form.
+
+				</p>
+				<p class="py-6">Services traditionally require resources to be delivered (e.g. raw material processing).
+					However, a subset of these (such as those requiring non-physical effort, for instance, stock market
+					trading, legal or accounting services) are ideally suited to being carried out at a significantly
+					lower cost via the application of algorithmic automations.
+
+				</p>
+				<p class="py-6">Note: this analysis assumes that the high carbon footprint required to drive the ‘Proof
+					of Work’ consensus mechanism used in many DLT ecosystems can be avoided, otherwise the
+					sustainability advantage can be legitimately debated.
+
+				</p>
+				<p class="text-2xl md:text-3xl mb-5">
+					The Generative Approach
+				</p>
+				<p class="py-6">The affordable access to digital resources, combined with the creation of consistently
+					innovative algorithms has also contributed to the rise of a generative production of digital assets.
+					These include partial generation, typically obtained by combining and assembling pre-made parts:
+					e.g. Robohash derives a hash from a text added to the URL that leads to a fixed combination of
+					mouths, eyes, faces, body and accessories.
+
+				</p>
+				<p class="py-6">Other approaches involve Neural Net Deep Learning: e.g. ThisPersonDoesNotExist uses a
+					technology known as Generative Adversarial Network (GAN) released by NVidia Research Labs to
+					generate random people faces, Magenta uses a Google TensorFlow library to generate Music and Art,
+					while DeepArt uses a patented neural net implementation based on the 19-layer VGG network.
+
+				</p>
+				<p class="py-6">In the gaming industry we should mention No Man’s Sky, a mainstream Console and PC Game
+					that shows a successful use of procedural generation.
+
+				</p>
+				<p class="py-6">Project DreamCatcher also uses a generative design approach that leverages a wide set of
+					simulated solutions that respond to a set of predefined requirements that a material or shape should
+					satisfy.
+
+				</p>
+				<p class="py-6">When it comes to Generative Art, it is important to ensure scarcity by restricting the
+					creation of digital assets to limited editions, so an auto-generated item can be traded without the
+					danger that an excess of supply triggers deflationary repercussions on its price. In Blockchain 2019
+					Part 2 we will describe techniques to register Non Fungible Tokens (NFT) on the blockchain in order
+					to track each individual replica of an object while ensuring that there are no illegal ones.
+
+				</p>
+				<p class="py-6">Interesting approaches directly linked to Blockchain Technology have been launched
+					recently such as the AutoGlyphs from LarvaLabs, although this remains an open area for further
+					exploration. Remarkably successful is the case of Obvious Art where another application of the GAN
+					approach resulted in a Generated Artwork being auctioned off for $432,500.
+
+				</p>
+				<p class="text-2xl md:text-3xl mb-5">
+					What prevents mass adoption of digital goods
+				</p>
+				<p class="py-6">Whereas it is sensible to forecast a significant expansion of the digital assets market
+					in the coming years, it is also true that, at present, there are still several psychological
+					barriers to overcome in order to get broader traction in the market.
+
+				</p>
+				<p class="py-6">The primary challenge relates to trust. A purchaser wants some guarantees that traded
+					assets are genuine and that the seller owns them or acts on behalf of the owner. DLT provides a
+					solid way to work out the history of a registered item without interrogating a centralised trusted
+					entity. Provenance and ownership are inferable and verifiable from a number of replicated ledgers
+					while block sequences can help ensure there is no double spending or double sale taking place within
+					a certain time frame.
+
+				</p>
+				<p class="py-6">The second challenge is linked to the meaning of ownership outside of the context of a
+					specific market. I would like to cite as an example the closure of Microsoft’s eBook store.
+					Microsoft’s decision to pull out of the ebook market, presumably motivated by a lack of profit,
+					could have an impact on all ebook purchases that were made on that platform. The perception of the
+					customer was obviously that owning an ebook was the same as owning a physical book. What Microsoft
+					might have contractually agreed through its End-User License Agreement (EULA), however, is that this
+					is true only within the contextual existence of its platform.
+
+				</p>
+				<p class="py-6">This has also happened in video games where enthusiast players are perceiving the
+					acquisition of a sword, or armour as if they were real objects. Even without the game closing down
+					its online presence (e.g. when its maintenance costs become unsustainable), a lack of interest or
+					reduced popularity might result in a digital item losing its value.
+
+				</p>
+				<p class="py-6">There is a push, in this sense, towards forms of ownership that can break out from the
+					restrictions of a specific market and be maintained in a broader context. Blockchain’s DLT in
+					conjunction with Smart Contracts, that exist potentially indefinitely, can be used to serve this
+					purpose allowing people to effectively retain their digital items’ use across multiple applications.
+					Whether those items will have a utility or value outside the context and platform in/on which they
+					were originally created remains to be seen.
+
+				</p>
+				<p class="py-6">Even the acquisition of digital art requires a substantial paradigm shift. Compared to
+					what happens with physical artefacts, there is not an equivalent tangible sense of taking home (or
+					to one’s secure storage vault) a purchased object. This has been substituted by a verifiable trace
+					on a distributed ledger that indicates to whom a registered digital object belongs.
+
+				</p>
+				<p class="py-6">Sensorial forms can also help in adapting to this new form of ownership. For instance, a
+					digital work of art could be printed, a 3D model could be rendered for a VR or AR experience or 3D
+					printed. In fact, to control what you can do with a digital item is per se a form of partial
+					ownership, which can be traded. This is different from the concept of fractional ownership where
+					your ownership comes in a general but diluted form. It is more a functional type of ownership. This
+					is a concept which exists in relation to certain traditional, non-digital assets, often bounded by
+					national laws and the physical form of those assets. For instance, I can own a classic Ferrari and
+					allow someone else to race it; I can display it in my museum and charge an entry fee to visitors;
+					but I will be restricted in how I am permitted to use the Ferrari name and badge attached to that
+					vehicle.
+
+				</p>
+				<p class="py-6">The transition to these new notions of ownership is particularly demanding when it comes
+					to digital non-fungible assets. Meanwhile, embracing fungible assets, such as a cryptocurrency, has
+					been somewhat easier for customers who are already used to relating to financial instruments. This
+					is probably because fungible assets serve the unique function of paying for something, while in the
+					case of non-fungible assets there is a range of functions that define their meaning in the digital
+					or physical space.
+
+				</p>
+				<p class="text-2xl md:text-3xl mb-5">
+					Conclusion
+				</p>
+				<p class="py-6">In this post we have discussed a major emerging innovation that blockchain technology
+					has influenced dramatically over the last two years - the ownership of digital assets. In Blockchain
+					2019 - Part 2 we will expand on how the handling of assets gets automated via increasingly powerful
+					Smart Contracts.
+
+				</p>
+				<p class="py-6">What we are witnessing is a new era that is likely to revolutionise the perception of
+					ownership and reliance on trusted and trustless forms of automation. This is driven by the need to
+					increase interoperability, cost compression, sustainability, performance (as in the speed at which
+					events occur) and customisation, which are all aspects where traditional centralised fintech systems
+					have not given a sufficient solution. It is worthwhile, however, to remind ourselves that the
+					journey towards providing a response to these requirements, should not come at the expense of safety
+					and security.
+
+				</p>
+				<p class="py-6">Privacy and sharing are also areas heavily debated. Owners of digital assets often
+					prefer their identity to remain anonymous, while the benefit of socially shared information is
+					widely recognised. An art collector, for instance, might not want to disclose his or her personal
+					identity. Certainly, a lot more still remains to be explored as we are clearly just at the beginning
+					of a wider journey that is going to reshape global digital and physical markets.
+
+				</p>
+				<p class="py-6">At Erlang Solutions we are collaborating with partners in researching innovative and
+					performant services to support a wide range of clients. This ranges from building core blockchain
+					technologies to more specific distributed applications supported by Smart Contracts. Part of this
+					effort has been shared on our website where you can find some information on who we work with in the
+					fintech world and some interesting case studies, others of which remain under the scope of NDAs.
+
+				</p>
+				<p class="py-6">This post intentionally aims at providing a state-of-the-art analysis. We soon expect to
+					be in a position to release more specific and, possibly controversial, articles where a bolder
+					vision will be illustrated. Get notifications when more content gets published - you know the drill,
+					we need your contact details - but we are not spammers!
+
+				</p>
+
+				<!--/ Post Content-->
+
+			</div>
+
+
+
+
+
+
+
+		</div>
+
+
+	</div>
+
+
+
+
+	<div class="bg-gray-200">
+
+		<div class="container w-full max-w-6xl mx-auto px-2 py-8">
+			<div class="flex flex-wrap -mx-2">
+
+				<div class="w-full md:w-1/3 px-2 pb-12">
+					<div class="h-full bg-white rounded overflow-hidden shadow-md hover:shadow-lg relative smooth">
+						<a href="Blockchain-2018-Myths-vs-Reality.html" class="no-underline hover:no-underline">
+							<img src="img/2-post.jpeg" class="h-48 w-full rounded-t shadow">
+							<div class="p-6 h-auto md:h-48">
+								<p class="text-gray-600 text-xs md:text-sm">2018-10-17</p>
+								<div class="font-bold text-xl text-gray-900">Blockchain 2018: Myths vs
+									Reality</div>
+								<p class="text-gray-800 font-serif text-base mb-5">
+									After a successful year of involvement in a variety of blockchain projects, I felt
+									it healthy to take a step back...
+								</p>
+							</div>
+							<div class="flex items-center justify-between inset-x-0 bottom-0 p-6">
+								<img class="w-8 h-8 rounded-full mr-4" src="img/dominic_perini_square.jpg"
+									alt="Avatar of Author">
+								<p class="text-gray-600 text-xs md:text-sm">22 MIN READ</p>
+							</div>
+						</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+	</div>
+
+
+	<footer class="bg-gray-900">
+		<div class="container max-w-6xl mx-auto flex items-center px-2 py-8">
+
+			<div class="w-full mx-auto flex flex-wrap items-center">
+				<div class="flex w-full md:w-1/2 justify-center md:justify-start text-white font-extrabold">
+					<a class="text-gray-900 no-underline hover:text-gray-900 hover:no-underline" href="#">
+						<span class="text-base text-gray-200">Mocda</span>
+					</a>
+				</div>
+				<div class="flex w-full pt-2 content-center justify-between md:w-1/2 md:justify-end">
+					<ul class="list-reset flex justify-center flex-1 md:flex-none items-center">
+						<li>
+							<a class="inline-block py-2 px-3 text-white no-underline" href="https://mocda.org">HOME</a>
+						</li>
+						<li>
+							<a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:underline py-2 px-3"
+								href="index.html">Publications</a>
+						</li>
+						
+					</ul>
+				</div>
+			</div>
+
+
+
+		</div>
+	</footer>
+
+
+	<script>
+		/* Progress bar */
+		//Source: https://alligator.io/js/progress-bar-javascript-css-variables/
+		var h = document.documentElement,
+			b = document.body,
+			st = 'scrollTop',
+			sh = 'scrollHeight',
+			progress = document.querySelector('#progress'),
+			scroll;
+		var scrollpos = window.scrollY;
+		var header = document.getElementById("header");
+
+		document.addEventListener('scroll', function () {
+
+			/*Refresh scroll % width*/
+			scroll = (h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight) * 100;
+			progress.style.setProperty('--scroll', scroll + '%');
+
+			/*Apply classes for slide in bar*/
+			scrollpos = window.scrollY;
+
+			if (scrollpos > 100) {
+				header.classList.remove("hidden");
+				header.classList.remove("fadeOutUp");
+				header.classList.add("slideInDown");
+			} else {
+				header.classList.remove("slideInDown");
+				header.classList.add("fadeOutUp");
+				header.classList.add("hidden");
+			}
+
+		});
+	</script>
+
+</body>
+
+</html>

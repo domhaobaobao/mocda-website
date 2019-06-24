@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Mocda - Blockchain 2018: Myths vs
+		Reality</title>
+	<meta name="author" content="name">
+	<meta name="description" content="description here">
+	<meta name="keywords" content="keywords,here">
+	<link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+	<!--Replace with your tailwind.css once created-->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+	<style>
+		.smooth {
+			transition: box-shadow 0.3s ease-in-out;
+		}
+
+		::selection {
+			background-color: aliceblue
+		}
+	</style>
+</head>
+
+<body class="bg-white leading-normal tracking-normal">
+
+	<!--Nav-->
+	<nav class="bg-gray-900 p-4 mt-0 w-full">
+		<div class="container mx-auto flex items-center">
+			<div class="flex text-white font-extrabold">
+				<a class="flex text-white text-base no-underline hover:text-white hover:no-underline" href="#">
+					<span class="hidden w-0 md:w-auto md:block pl-1">Mocda</span>
+				</a>
+			</div>
+			<div class="flex pl-4 text-sm">
+				<ul class="list-reset flex justify-between flex-1 md:flex-none items-center">
+					<li class="mr-2">
+						<a class="inline-block py-2 px-2 text-white no-underline" href="index.html">HOME</a>
+					</li>
+					<li class="mr-2">
+						<a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-2"
+							href="#">LINK</a>
+					</li>
+					<li class="mr-2">
+						<a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-2"
+							href="#">LINK</a>
+					</li>
+					<li class="mr-2">
+						<a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-2"
+							href="#">LINK</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!--slide in nav-->
+	<div id="header" class="bg-white fixed w-full z-10 top-0 hidden animated" style="opacity: .95;">
+		<div class="bg-white">
+			<div class="flex flex-wrap items-center content-center">
+				<div class="flex w-1/2 justify-start text-white font-extrabold">
+					<a class="flex text-gray-900 no-underline hover:text-gray-900 hover:no-underline pl-2" href="#">
+						<span class="hidden w-0 md:w-auto md:block pl-1">Mocda</span>
+					</a>
+				</div>
+				<div class="flex w-1/2 justify-end content-center">
+					<p class="hidden sm:block mr-3 text-center h-14 p-4 text-xs"><span class="pr-2">Share this</span> 👉
+					</p>
+					<a class="inline-block text-white no-underline hover:text-white hover:text-underline text-center h-10 w-10 p-2 md:h-auto md:w-16 md:p-4"
+						href="https://twitter.com/intent/tweet?url=#" style="background-color:#33b1ff;">
+						<svg class="fill-current text-white h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+							<path
+								d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z">
+							</path>
+						</svg>
+					</a>
+					<a class="inline-block text-white no-underline hover:text-white hover:text-underline text-center h-10 w-10 p-2 md:h-auto md:w-16 md:p-4"
+						href="https://www.facebook.com/sharer/sharer.php?u=#" style="background-color:#005e99">
+						<svg class="fill-current text-white h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+							<path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z">
+							</path>
+						</svg>
+					</a>
+					<a class="inline-block text-white no-underline hover:text-white hover:text-underline text-center h-10 w-10 p-2 md:h-auto md:w-16 md:p-4"
+						href="https://www.linkedin.com/shareArticle?mini=true&url=[URL]&title=[TITLE]" style="background-color:#0e76a8;">
+						<svg class="fill-current text-white h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+							<path
+								d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+							</svg>
+					</a>
+
+				</div>
+			</div>
+
+		</div>
+		<!--Progress bar-->
+		<div id="progress" class="h-1 bg-white shadow"
+			style="background:linear-gradient(to right, #4dc0b5 var(--scroll), transparent 0);"></div>
+	</div>
+
+
+	<!--Title-->
+	<div class="text-center pt-16 md:pt-32">
+		<p class="text-sm md:text-base text-teal-500 font-bold">17 OCTOBER 2018</p>
+		<h1 class="font-bold break-normal text-3xl md:text-5xl">Blockchain 2018: Myths vs
+			Reality</h1>
+	</div>
+
+	<!--image-->
+	<div class="container w-full max-w-6xl mx-auto bg-white bg-cover mt-8 rounded"
+		style="background-image: url(img/2-post.jpeg); height: 75vh;"></div>
+
+	<!--Container-->
+	<div class="container max-w-5xl mx-auto -mt-16">
+
+		<div class="mx-0 sm:mx-6">
+
+			<div class="bg-white w-full p-8 md:p-24 text-xl md:text-2xl text-gray-800 leading-normal"
+				>
+
+				<!--Post Content-->
+
+
+				<!--Lead Para-->
+
+
+				<p class="py-6">After a successful year of involvement in a variety of blockchain projects, I felt it
+					healthy to take a step back and observe the emerging trends in this nascent (but still multi billion
+					dollar) industry and question whether some of the directions taken so far are sensible or whether
+					any corrections are necessary. I will provide a ‘snapshot’ of the state of advancement of the
+					blockchain technology, describing the strengths and weaknesses of the solutions that have emerged so
+					far, without proposing innovations at this stage (those ideas will form the subject of future blog
+					posts). If you are interested to hear what I and Erlang Solutions, where I work as Scalability
+					Architect and Technical Lead have to say about blockchain, let me take you through it:</p>
+				<p class="text-2xl md:text-3xl mb-5">
+					The context
+				</p>
+				<p class="py-6">I do not propose in this blogpost to get into the details of the blockchain data
+					structure itself, nor will I discuss what is the best Merkle tree solution to adopt. I will also
+					avoid hot topics such as ‘Transactions Per Second’ (TPS) and the mechanisms for achieving
+					substantial transaction volumes, which is de facto the ultimate benchmark widely adopted as a
+					measurement of how competitive a solution is against the major players in the market; Bitcoin and
+					Ethereum.
+
+				</p>
+
+				<p class="py-6">What I would like to examine instead is the state of maturity of the technology, and its
+					alignment with the core principles that underpin the distributed ledger ecosystem. I hope that
+					presenting a clear picture of these principles and how they are evolving may be helpful.</p>
+				<p class="text-2xl md:text-3xl mb-5">
+					The principles
+				</p>
+
+
+
+				<p class="py-6">As the primary drive for innovation emerges from public, open source blockchains, this
+					will be the one on which we will focus our attention.
+
+				</p>
+				<p class="py-6">The blockchain technology mainly aims at embracing the following high level principles:
+
+				</p>
+
+				<ol class="list-decimal">
+					<li>Immutability of the history</li>
+					<li>Decentralisation of the control</li>
+					<li>‘Workable’ consensus mechanism</li>
+					<li>Distribution and resilience</li>
+					<li>Transactional automation (including ‘smart contracts’)</li>
+					<li>Transparency and Trust</li>
+					<li>Link to the external world</li>
+				</ol>
+				<p class="py-6">Let us look at them one by one:</p>
+				<p class="text-2xl md:text-3xl mb-5">
+					1. Immutability of the history
+				</p>
+				<p class="py-6">In an ideal world it would be desirable to preserve an accurate historical trace of
+					events, and make sure this trace does not deteriorate over time, whether through natural events, or
+					by human error or by the intervention of fraudulent actors. The artefacts produced in the analogue
+					world face alterations over time, although there is often the intent to make sure they can withstand
+					forces that threaten to alter and eventually destroy them. In the digital world the quantized /
+					binary nature of the stored information provides the possibility of continuous corrections to
+					prevent any deterioration that might occur over time.
+
+				</p>
+				<p class="py-6">Writing an immutable blockchain aims to retain a digital history that cannot be altered
+					over time and on top of which one can verify that a trace of an event, known as a transaction, is
+					recorded in it. This is particularly attractive when it comes to assessing the ownership or the
+					authenticity of an asset or to validate one or more transactions.
+
+				</p>
+				<p class="py-6">We should note that, on top of the inherent immutability of a well-designed and
+					implemented blockchain, hashing algorithms also provide a means to encode the information that gets
+					written in the history so that the capacity to verify a trace/transaction can only be performed by
+					actors possessing sufficient data to compute the one-way1 cascaded encoding/encryption. This is
+					typically implemented on top of Merkle trees where hashes of concatenated hashes are computed.
+
+
+				</p>
+				<p class="py-6">Legitimate questions can be raised about the guarantees for indefinitely storing an
+					immutable data structure:
+
+
+				</p>
+
+				<ol class="list-decimal">
+					<li>If this is an indefinitely growing history, where can it be stored once it grows beyond capacity
+						of the ledgers?
+					</li>
+					<li>As the history size grows (and/or the computing power needed to validate further transactions
+						increases) this reduces the number of potential participants in the ecosystem, leading to a de
+						facto loss of decentralisation. At what point does this concentration of ‘power’ create
+						concerns?
+					</li>
+					<li>How does the verification performance deteriorate as the history grows?
+					</li>
+					<li>How does it deteriorate when a lot of data gets written on it concurrently by the users?
+					</li>
+					<li>How long is the segment of data that you replicate on each ledger node?</li>
+					<li>How much network traffic would such replication generate?</li>
+					<li>How much history is needed to be able to compute a new transaction?</li>
+					<li>What compromises need to be made on linearisation of the history, replication of the
+						information, capacity to recover from anomalies and TPS throughput?
+					</li>
+
+				</ol>
+
+
+				<p class="py-6">Further to the above questions we would also like to understand how many replicas
+					converging to a specific history (i.e. consensus) would be needed for it to carry on existing, and
+					in particular:
+					<ol class="list-decimal">
+						<li>Can a fragmented network carry on writing to their known history?
+
+						</li>
+						<li>Is an approach designed to ‘heal’ any discrepancies in the immutable history of transactions
+							by rewarding the longest fork, fair and efficient?
+
+						</li>
+						<li>Are the deterrents strong enough to prevent a group of ledgers forming their own fork3 that
+							eventually reaches a wider adoption?
+
+						</li>
+
+
+					</ol>
+
+				</p>
+				<p class="py-6">Furthermore, a new requirement to comply with the General Data Protection Regulations
+					(GDPR) in Europe and ‘the right to be forgotten’ introduced new challenges to the perspective of
+					keeping permanent and immutable traces indefinitely. This is important because fines for breach of
+					GDPR are potentially very significant. The solutions introduced so far effectively aim at
+					anonymising the information that enters the immutable on-chain storage process, while sensitive
+					information is stored separately in support databases where this information can be deleted if
+					required. None of these approaches has yet been tested by the courts, nor has a definition of what
+					the GDPR ‘right to be forgotten’ means in practice.
+
+
+				</p>
+				<p class="py-6">The challenging aspect here is to decide upfront what is considered sensitive and what
+					can safely be placed on the immutable history. A wrong upfront choice can backfire at a later stage
+					in the event that any involved actor manages to extract or trace sensitive information through the
+					immutable history.
+
+
+				</p>
+				<p class="py-6">Immutability represents one of the fundamental principles that motivates the research
+					into blockchain technology, both private and public. The solutions explored so far have managed to
+					provide a satisfactory response to the market needs via the introduction of history linearisation
+					techniques, one-way hashing encryptions, merkle trees and off-chain storage, although the linearity
+					of the immutable history4 comes at a cost (notably transaction volume).
+
+				</p>
+				<p class="text-2xl md:text-3xl mb-5">
+					2. Decentralisation of the control
+				</p>
+				<p class="py-6">During the aftermath of the 2008 global financial crisis (one interpretation of which is
+					that it highlighted the global financial disasters that could occur from over centralisation and the
+					misalignment of economic incentives) there arose a deep mistrust of ‘traditional’, centralised
+					institutions, political and commercial. One reaction against such centralisation was the exploration
+					of various decentralised mechanisms which could replace those traditional, centralised structures.
+					The proposition that individuals operating in a social context ideally would like to enjoy the
+					freedom to be independent from a central authority gained in popularity. Self determination,
+					democratic fairness and heterogeneity as a form of wealth are among the dominant values broadly
+					recognised in Western (and, increasingly, non-Western) society. These values added weight to the
+					movement that introducing decentralisation in a system is positive. I have rarely seen this very
+					idea being challenged at all (in the same way one rarely hears criticism of the proposition that
+					‘information wants to be free’), although in some circumstances the unwanted consequences of using
+					this approach can clearly be seen.
+
+
+				</p>
+				<p class="py-6">For instance, one might argue that it is only due to our habits that we normally resolve
+					anomalies in a system by contacting a central authority, which according to our implicit or explicit
+					contractual terms, bears the responsibility for what happens to the system. Therefore, in the event
+					of a damage incurred through a miscarried transaction that might be caused by a system failure or a
+					fraudulent actor, we are typically inclined to contact the central bearer of the responsibility to
+					intervene and try to resolve the damage sustained. Human history is characterised by the evolution
+					of hierarchical power structures, even in the most ‘democratic’ of societies, and these hierarchies
+					naturally create centralisation, independent of the dominant political structure in any particular
+					society. This characteristic continues into the early 21st century.
+
+
+				</p>
+				<p class="py-6">With decentralisation, however, there is no such central authority that could resolve
+					those issues for us. Traditional, centralised systems have well developed anti-fraud and asset
+					recovery mechanisms which people have become used to. Using new, decentralised technology places a
+					far greater responsibility on the user if they are to receive all of the benefits of the technology,
+					forcing them to take additional precautions when it comes to handling and storing their digital
+					assets. In particular they need to keep the access to their digital wallets protected and make sure
+					they don’t lose it. Similarly when performing transactions, such as giving away a digital asset to a
+					friend or a relative, they have to make sure it is sent to the right address/wallet, otherwise it
+					will be effectively lost or mistakenly handed over to someone else.
+
+
+				</p>
+				<p class="py-6">Also, there’s no point having an ultra-secure blockchain if one then hands over one’s
+					wallet private key to an intermediary (more ‘centralisation’ again) whose security is lax: it’s like
+					having the most secure safe in the world then writing the combination on a whiteboard in the same
+					room.
+
+
+				</p>
+				<p class="py-6">Is the increased level of personal responsibility that goes with the proper
+					implementation of a secure blockchain a price that users are willing to pay; or will they trade off
+					some security in exchange for ease of use (and, by definition, more centralisation)? It’s too early
+					to see how this might pan out. If people are willing to make compromises here, what other
+					compromises re, say, security or centralisation would they be prepared to accept in exchange for
+					lower cost/ease of use? We don’t know, as there’s no secure blockchain ecosystem yet operating at
+					scale.
+
+
+				</p>
+				<p class="py-6">Another threat to the broad endorsement and success of the decentralisation principle is
+					posed by governmental regulatory/legal pressures on digital assets and ecosystems. This is to ensure
+					that individuals do not use the blockchain for tax evasion and that the ownership of their digital
+					assets is somehow protected. However any attempt to regulate this market from a central point is
+					undermining the effort to promote the adoption of a decentralised form of authority.
+
+
+				</p>
+				<p class="text-2xl md:text-3xl mb-5">
+					3. Consensus
+				</p>
+				<p class="py-6">The consistent push towards decentralised forms of control and responsibility has
+					brought to light the fundamental requirement to validate transactions without the need for (or
+					intervention of) a central authority; this is known as the ‘consensus’ problem and a number of
+					approaches have grown out of the blockchain industry, some competing and some complementary.
+
+
+
+				</p>
+				<p class="py-6">There has also been a significant focus around the concept of governance within a
+					blockchain ecosystem. This concerns the need to regulate the rates at which new blocks are added to
+					the chain and the associated rewards for miners (in the case of blockchains using proof of work
+					(POW) consensus methodologies). More generally, it is important to create incentives and deterrent
+					mechanisms whereby interested actors contribute positively to the healthy continuation of the chain
+					growth.
+
+
+
+				</p>
+				<p class="py-6">Besides serving as economic deterrent against denial of service and spam attacks, POW
+					approaches are amongst the first attempts to automatically work out, via the use of computational
+					power, which ledgers/actors have the authority to create/mine new blocks5. Other similar approaches
+					(proof of space, proof of bandwidth etc) followed, however, they all suffered from exposure to
+					deviations from the intended fair distribution of control. Wealthy participants can in fact exploit
+					these approaches to gain an advantage via purchasing high performance (CPU / memory / network
+					bandwidth) dedicated hardware in large quantity and operating it in jurisdictions where electricity
+					is relatively cheap. This results in overtaking the competition to obtain the reward, and the
+					authority to mine new blocks, which has the inherent effect of centralising the control. Also the
+					huge energy consumption that comes with the inefficient nature of the competitive race to mine new
+					blocks in POW consensus mechanisms has raised concerns about its environmental impact and economic
+					sustainability. The most recent report on the energy usage of Bitcoin can be seen here on
+					digiconomist.
+
+
+
+				</p>
+				<p class="py-6">Proof of Stake (POS) and Proof of Importance (POI) are among the ideas introduced to
+					drive consensus via the use of more social parameters, rather than computing resources. These two
+					approaches link the authority to the accumulated digital asset/currency wealth or the measured
+					productivity of the involved participants. Implementing POS and POI mechanisms, whilst guarding
+					against the concentration of power/wealth, poses not insubstantial challenges for their architects
+					and developers.
+
+
+
+				</p>
+				<p class="py-6">More recently, semi-automatic approaches, driven by a human-curated group of ledgers,
+					are putting in place solutions to overcome the limitations and arguable fairness of the above
+					strategies. The Delegated Proof of Stake (DPOS) and Proof of Authority (POA) methods promise higher
+					throughput and lower energy consumptions, while the human element can ensure a more adaptive and
+					flexible response to potential deviations caused by malicious actors attempting to exploit a
+					vulnerability of the system.
+
+
+
+				</p>
+				<p class="py-6">Whether these solutions actually manage to fulfill the inherent requirements, set by the
+					principle of control distribution, is debatable. Similarly, when it comes to the idea of bringing in
+					another layer of human driven consensus for the curation, it is clear that we are abandoning a
+					degree of automation. Valuing trust and reputation in the way authority gets exercised on the
+					governance of a particular blockchain appears to bring back a form of centralised control, which
+					clearly goes against the original intention and the blockchain ethos.
+
+				</p>
+				<p class="py-6">This appears to be one of the areas where, despite the initial enthusiasm, there is not
+					yet a clear solution that drives consensus in a fair, sustainable and automated manner. Moving
+					forward I expect this to be the main research focus for the players in the industry, as current
+					solutions leave many observers unimpressed. There will likely emerge a number of differing
+					approaches, each suitable for particular classes of use case.
+
+				</p>
+
+
+				<p class="text-2xl md:text-3xl mb-5">
+					4. Distribution and resilience </p>
+				<p class="py-6">Apart from decentralising the authority, control and governance, blockchain solutions
+					typically embrace a distributed Peer to Peer (P2P) design paradigm. This preference is motivated by
+					the inherent resilience and flexibility that these types of networks have introduced and
+					demonstrated, particularly in the context of file and data sharing (see a brief p2p history here).
+					The diagram below is frequently used to explain the difference among three network topologies:
+					centralised, decentralised and distributed.
+
+
+
+				</p>
+				<p class="py-6">A centralised network, typical of mainframes and centralised services6, is clearly
+					exposed to a ‘single point of failure’ vulnerability as the operations are always routed towards a
+					central node. In the event that the central node breaks down or is congested, all the other nodes
+					will be affected by disruptions.
+
+
+
+				</p>
+				<p class="py-6">Decentralised and distributed networks attempt to reduce the detrimental effects that
+					issues occurring on a node might trigger on other nodes. In a decentralised network, the failure of
+					a node can still affect several neighbouring nodes that rely on it to carry out their operations. In
+					a distributed network the idea is that failure of a single node should not impact significantly any
+					other node. In fact, even when one preferential/optimal route in the network becomes congested or
+					breaks down entirely, a message can reach the destination via an alternative route. This greatly
+					increases the chances to keep a service available in the event of failure or malicious attacks such
+					as a denial of service (DOS) attack.
+
+
+
+				</p>
+				<p class="py-6">Blockchain networks where a distributed topology is combined with a high redundancy of
+					ledgers backing a history have occasionally been declared “unhackable” by enthusiasts or, as some
+					more prudent debaters say, “difficult to hack”. There is truth in this, especially when it comes to
+					very large networks such as Bitcoin (see an additional explanation here). In such a highly
+					distributed network, the resources needed to generate a significant disruption are very high, which
+					not only delivers on the resilience requirement, but also works as a deterrent against malicious
+					attacks (principally because the cost of conducting a successful malicious attack becomes
+					prohibitive).
+
+
+
+				</p>
+				<p class="py-6">Although a distributed topology can provide an effective response to failures or traffic
+					spikes, we need to be aware that delivering resilience against prolonged over-capacity demands or
+					malicious attacks requires adequate adapting mechanisms. While the Bitcoin network is well
+					positioned, as it currently benefits from a high capacity condition (due to the historical high
+					incentive to purchase hardware by third party miners7 ), this is not the case for other emerging
+					networks as they grow in popularity. This is where novel instruments, capable of delivering
+					preemptive adaptation combined with back pressure throttling applied to the P2P level, can be of
+					great value.
+
+
+
+				</p>
+				<p class="py-6">Distributed systems are not new and, whilst they provide highly robust solutions to many
+					enterprises and governmental problems, they are subject to the laws of physics and require their
+					architects to consider the trade-offs that need to be made in their design and implementation (e.g.
+					consistency vs availability). This remains the case for blockchain systems.
+
+
+				</p>
+				<p class="text-2xl md:text-3xl mb-5">
+					5. Automation
+
+				</p>
+				<p class="py-6">In order to sustain a coherent, fair and consistent blockchain and its surrounding
+					ecosystem a high degree of automation is required. Existing areas with a high demand of automation
+					include those common to most distributed systems. For instance; deployment, elastic topologies,
+					monitoring, recovery from anomalies, testing, continuous integration, and continuous delivery. In
+					the context of blockchains, these represent well-established IT engineering practices. Additionally,
+					there is a creative R&D effort to automate the interactions required to handle assets, computational
+					resources and users across a range of new problem spaces (e.g. logistics, digital asset creation and
+					trading etc).
+
+
+
+				</p>
+				<p class="py-6">The trend of social interactions has seen a significant shift towards scripting for
+					transactional operations. This is where ‘Smart Contracts’ and constrained virtual machines (VM)
+					interpreters have emerged - an effort pioneered by the Ethereum project.
+
+
+
+				</p>
+				<p class="py-6">The possibility to define through scripting how to operate an asset exchange, under what
+					conditions and actioned by which triggers, has attracted many blockchain enthusiasts. Some of the
+					most common applications of Smart Contracts involve lotteries, trade of digital assets and
+					derivative trading. While there is clearly an exciting potential unleashed by the introduction of
+					Smart Contracts, it is also true that it is still an area with a high entry barrier. Only skilled
+					developers that are willing to invest time in learning Domain Specific Languages (DSL)8 have access
+					to the actual creation and modification of these contracts.
+
+
+
+				</p>
+				<p class="py-6">Besides, developers can create contracts that contain errors or are incapable to operate
+					under unexpected conditions. This can happen, for instance, when the implementation of a contract is
+					commissioned to a developer that does not have sufficient domain knowledge. Although the industry is
+					taking steps in the right direction, there is still a long way to go in order to automatically adapt
+					to unforeseen conditions and create effective Smart Contracts in non-trivial use cases. The
+					challenge is to respond to safety and security concerns when Smart Contracts are applied to edge
+					case scenarios that deviate from the ‘happy path’. If badly-designed contracts cannot properly
+					rollback/undo a miscarried transaction, their execution might lead to assets being lost or
+					erroneously handed over to unwanted receivers. A number of organisations are conducting R&D effort
+					to respond to these known issues and introduce VMs operating under more restrictive constraints to
+					deliver a higher level of safety and security. However, from a conceptual perspective, this is a
+					restriction that reduces the flexibility to implement specific needs.
+
+
+
+				</p>
+				<p class="py-6">Another area in high need for automation is governance. Any blockchain ecosystem of
+					users and computing resources requires periodic configurations of the parameters to carry on
+					operating coherently and consensually. This results in a complex exercise of tuning for incentives
+					and deterrents to guarantee the fulfilment of ambitious collaborative and decentralised goals. The
+					newly emerging field of ‘blockchain economics’ (combining economics; game theory; social science and
+					other disciplines) remains in its infancy.
+
+
+
+				</p>
+				<p class="py-6">Clearly the removal of a central ruling authority produces a vacuum that needs to be
+					filled by an adequate decision making body, which is typically supplied with an automation that
+					maintains a combination of static and dynamic configuration settings. Those consensus solutions
+					referred to earlier which use computational resources or social stackable assets to assign the
+					authority, not only to produce blocks but also to steer the variable part of governance9, have
+					originally succeeded to fill the decision making gap in a fair and automated way. Successively, the
+					exploitation of flaws in the static element of governance has hindered the success of these models.
+					This has contributed to the rise of popularity of curated approaches such as POA or DPOS, which not
+					only bring back a centralised control, but also reduce the automation of governance.
+
+
+				</p>
+				<p class="py-6">I expect this to be one of the major area where blockchain has to evolve in order to
+					succeed in getting a widespread market adoption.
+
+
+
+				</p>
+
+				<p class="text-2xl md:text-3xl mb-5">
+					6. Transparency and Trust
+				</p>
+				<p class="py-6">In order to produce the desired audience engagement for a blockchain and eventually
+					determine its mass adoption and success, its consensus and governance mechanisms need to operate
+					transparently. Users need to know who has access to what data, so that they can decide what can be
+					stored and possibly shared on-chain. These are the contractual terms by which users agree to share
+					their data. As previously discussed users might require to exercise the right for their data to be
+					deleted, which typically is a feature delivered via auxiliary, ‘off-chain’ databases. In contrast,
+					only hashed information, effectively devoid of its meaning, is preserved permanently on-chain.
+
+
+
+				</p>
+				<p class="py-6">Given the immutable nature of the chain history, it is important to decide upfront what
+					data should be permanently written on-chain and what gets written off-chain. The users should be
+					made aware of what data gets stored on-chain and with whom it could potentially be shared. Changing
+					access to on-chain data or deleting it goes against the fundamentals of the immutability and
+					therefore is almost impossible. Getting that decision wrong at the outset can significantly affect
+					the cost and usability (and therefore likely adoption) of the blockchain in question.
+
+
+
+				</p>
+				<p class="py-6">Besides transparency, trust is another critical feature that users legitimately seek.
+					This is one of the reasons why blockchain manages to attract customers who have developed distrust
+					in traditional centrally-ruled networks (most notably banks and rating organisations after the
+					mishandling of the subprime mortgages that led to the 2008 financial crisis). It is vital,
+					therefore, that central operating bodies in the shape of curated POA/DPOS consensus act in a
+					transparent and trustworthy manner, so that decision makers are not perceived as an elite that could
+					pursue their own goals, instead of operating in the interest of the collective.
+
+
+
+				</p>
+				<p class="py-6">Another example of trust towards the people involved becomes relevant when the
+					blockchain information is linked to the real world. As it will be clarified in the context of the
+					next principle (see heading 7), this link involves people and technology dedicated to guarantee the
+					accurate preservation of these links against environmental deterioration or fraudulent misuse.
+
+
+
+				</p>
+				<p class="py-6">Trust also has to go beyond the scope of the people involved as systems need to be
+					trusted as well. Every static element, such as an encryption algorithm, the dependency on a library,
+					or an fixed configuration, is potentially exposed to vulnerabilities. Concerns here are
+					understandable given the increasing amount of well-publicised hacks and security breaches that have
+					occurred over the last couple of years. In the cryptocurrency space, these attacks have frequently
+					resulted in the perpetrators successfully walking away with large sums of money, without leaving
+					traces that could be realistically used to track down their identity, or rollback to a previous
+					healthy state. In the non-crypto space they have resulted in widespread hacks of data and the
+					disabling of corporate and civil IT systems.
+
+
+
+				</p>
+				<p class="py-6"></p>
+				<p class="py-6"></p>
+				<p class="py-6"></p>
+
+				<p class="text-2xl md:text-3xl mb-5">
+					7. Link to the external world
+				</p>
+
+				<p class="py-6">The attractive features that blockchain has brought to the internet market would be
+					limited to handling digital assets, unless there was a way to link informations to the real world.
+					For some reason this brings back to my mind the popular movie “The Matrix” and the philosophical
+					question from René Descartes about what is real and if there is another reality behind the perceived
+					one. Without indulging excessively in arguable analogies, it is safe to say that there would be less
+					interest if we were to accept that a blockchain can only operate under the restrictive boundaries of
+					the digital world, without connecting to the analog real world in which we live.
+
+				</p>
+				<p class="py-6">Technologies used to overcome these limitations include cyber-physical devices such as
+					sensors for input and robotic activators for output, and in most circumstances, people and
+					organisations. As we read through most blockchain whitepapers we might occasionally come across the
+					notion of the oracle, which in short, is a way to name an input coming from a trusted external
+					source that could potentially trigger/activate a sequence of transactions in a Smart Contract or
+					which can otherwise be used to validate some information that cannot be validated within the
+					blockchain itself.
+
+				</p>
+				<p class="py-6">Under the Transparency and Trust section we discussed how these peripheral areas are as
+					susceptible to errors and malicious interference as the core blockchain and Smart Contracts
+					automations. For instance, suppose we are tracking the history of a precious collectible item,
+					unless we have the capacity to identify reliably the physical object in question we risk that its
+					history is lost or attributed to another object.
+
+				</p>
+				<p class="py-6">A remarkable example of object identification approach via physical characteristics is
+					the one used by Everledger to track diamonds. As briefly explained, 40 metadata information can be
+					extracted from the object, including the cut, the clarity, the colour, etc. Given the
+					quasi-immutable nature of the objects in question, this has proved a particularly successful use
+					case. It is more challenging instead to accurately identify objects that degrade over time (e.g.
+					fine art). In this case typically trusted people are involved, or a combination of people and sensor
+					metadata. Relying on expert actors to provide external validation relies upon a properly aligned set
+					of incentives. ‘Traditional’ industries have a long history of dealing with these issues and
+					well-developed mechanisms for dealing with them: blockchain-based solutions are exploring many ways
+					in which they can interface (and adapt) these existing mechanisms.
+
+				</p>
+				<p class="py-6">On a different perspective even wealth itself only makes sense if it can be exercised in
+					the ‘real world’. This is as valid for blockchain as well as traditional centrally-controlled
+					systems, and in fact the idea of virtualising wealth is not new to us as we shifted from trading
+					time and goods directly, to stacking wealth into account deposits. What’s new in this respect is the
+					introduction of alternate currencies known as cryptocurrencies.
+
+				</p>
+				<p class="py-6">Bitcoin and Ethereum, the two dominant projects (in September 2018) in the blockchain
+					space are by many investors seen as an opportunity to diversify a portfolio or speculate on the
+					value of their respective cryptocurrency. The same applies to a wide range of other cryptocurrencies
+					with the exception of fiat pegged currencies, most notably Tether, where the value is effectively
+					bound to the US dollar. Conversions from one cryptocurrency to another and to/from fiat currencies
+					is typically operated by exchanges on behalf of an investor. These are again peripheral services
+					that serve as link to the external world.
+
+				</p>
+				<p class="py-6">From a blockchain perspective, some argue that the risk control a cryptocurrency
+					investor demands - so that there is the possibility to step back and convert back to fiat currencies
+					- is the wrong mindset. Evangelising trust towards the cryptocurrency diversification however,
+					understandably, requires an implementation period during which investors legitimately might want to
+					exercise the option to pull-out.
+
+				</p>
+				<p class="py-6">Besides oracles and cyber-physical links, an interest is emerging with linking Smart
+					Contracts together to deliver a comprehensive solution. Contracts could indeed operate in a
+					cross-chain scenario to offer interoperability among a variety of digital assets and protocols.
+					Although attempts to combine different protocols and approaches have emerged (e.g. see the EEA and
+					the Accord Project), this is still an area where further R&D is necessary in order to provide enough
+					instruments and guarantees to developers and entrepreneurs. The challenge is to deliver cross-chain
+					functionalities without the support of a central governing agency/body.
+
+				</p>
+
+				<p class="text-2xl md:text-3xl mb-5">
+					Conclusion
+				</p>
+				<p class="py-6">The financial boost that the blockchain market has benefited from, through the large
+					fundraise operations conducted through the 2017-2018 initial coin offerings (ICO), has given the
+					opportunity to conduct a substantial amount of R&D studies aimed at finding solutions to the
+					challenges described in this blogpost. Although step changes have been introduced by the work of
+					visionary individuals with mathematical backgrounds such as S. Nakamoto and V. Buterin, it seems
+					clear that contributions need to come from a variety of expertises to ensure a successful
+					development of the technology and the surrounding ecosystem. It is an exercise that involves
+					evangelisation, social psychology, automation, regulatory compliance and ethical direction.
+
+				</p>
+				<p class="py-6">The challenges the market is facing can be interpreted as an opportunity for ambitious
+					entrepreneurs to step in and resolve the pending fundamental issues of consensus, governance,
+					automation and link to the real world. It is important in this sense to ensure that the people you
+					work with have the competence, the technology and a good understanding of the issues to be resolved,
+					in order to successfully drive this research forward (see Erlang Solutions offering here).
+
+				</p>
+				<p class="py-6">As discussed in the introduction, this blogpost only focuses on assessing the state of
+					advancement of the technology in response to the motivating principles, and analyses known issues
+					without proposing solutions. That said, I and the people I work with, are actively working on
+					solutions that will be presented and discussed in a separate forum. If you are interested to learn
+					more, stay tuned for the next chapter :-) ..
+
+				</p>
+
+
+				<!--/ Post Content-->
+
+			</div>
+
+
+
+
+
+
+
+		</div>
+
+
+	</div>
+
+
+
+
+	<div class="bg-gray-200">
+
+		<div class="container w-full max-w-6xl mx-auto px-2 py-8">
+			<div class="flex flex-wrap -mx-2">
+
+				<div class="w-full md:w-1/3 px-2 pb-12">
+					<div class="h-full bg-white rounded overflow-hidden shadow-md hover:shadow-lg relative smooth">
+						<a href="Blockchain-2018-Myths-vs-Reality.html" class="no-underline hover:no-underline">
+							<img src="img/1-post.jpeg" class="h-48 w-full rounded-t shadow">
+							<div class="p-6 h-auto md:h-48">
+								<p class="text-gray-600 text-xs md:text-sm">2018-10-17</p>
+								<div class="font-bold text-xl text-gray-900">Blockchain 2018: Myths vs
+									Reality</div>
+								<p class="text-gray-800  text-base mb-5">
+									After a successful year of involvement in a variety of blockchain projects, I felt
+									it healthy to take a step back...
+								</p>
+							</div>
+							<div class="flex items-center justify-between inset-x-0 bottom-0 p-6">
+								<img class="w-8 h-8 rounded-full mr-4" src="img/dominic_perini_square.jpg"
+									alt="Avatar of Author">
+								<p class="text-gray-600 text-xs md:text-sm">22 MIN READ</p>
+							</div>
+						</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+	</div>
+
+
+	<footer class="bg-gray-900">
+		<div class="container max-w-6xl mx-auto flex items-center px-2 py-8">
+
+			<div class="w-full mx-auto flex flex-wrap items-center">
+				<div class="flex w-full md:w-1/2 justify-center md:justify-start text-white font-extrabold">
+					<a class="text-gray-900 no-underline hover:text-gray-900 hover:no-underline" href="#">
+						<span class="text-base text-gray-200">Mocda</span>
+					</a>
+				</div>
+				<div class="flex w-full pt-2 content-center justify-between md:w-1/2 md:justify-end">
+					<ul class="list-reset flex justify-center flex-1 md:flex-none items-center">
+						<li>
+							<a class="inline-block py-2 px-3 text-white no-underline" href="index.html">HOME</a>
+						</li>
+						<li>
+							<a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:underline py-2 px-3"
+								href="#">link</a>
+						</li>
+						<li>
+							<a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:underline py-2 px-3"
+								href="#">link</a>
+						</li>
+						<li>
+							<a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:underline py-2 px-3"
+								href="#">link</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+
+
+		</div>
+	</footer>
+
+
+	<script>
+		/* Progress bar */
+		//Source: https://alligator.io/js/progress-bar-javascript-css-variables/
+		var h = document.documentElement,
+			b = document.body,
+			st = 'scrollTop',
+			sh = 'scrollHeight',
+			progress = document.querySelector('#progress'),
+			scroll;
+		var scrollpos = window.scrollY;
+		var header = document.getElementById("header");
+
+		document.addEventListener('scroll', function () {
+
+			/*Refresh scroll % width*/
+			scroll = (h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight) * 100;
+			progress.style.setProperty('--scroll', scroll + '%');
+
+			/*Apply classes for slide in bar*/
+			scrollpos = window.scrollY;
+
+			if (scrollpos > 100) {
+				header.classList.remove("hidden");
+				header.classList.remove("fadeOutUp");
+				header.classList.add("slideInDown");
+			} else {
+				header.classList.remove("slideInDown");
+				header.classList.add("fadeOutUp");
+				header.classList.add("hidden");
+			}
+
+		});
+	</script>
+
+</body>
+
+</html>
